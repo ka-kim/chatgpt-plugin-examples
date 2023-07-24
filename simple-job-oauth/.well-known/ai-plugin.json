@@ -1,0 +1,34 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "LI Job Postings Plugin",
+  "name_for_model": "jp",
+  "description_for_human": "Plugin for testing Job Postings, you can post your job via ChatGPT!",
+  "description_for_model": "Plugin for testing Job Postings, you can post your job via ChatGPT!",
+  "auth": {
+    "type": "service_http",
+    "authorization_type": "bearer",
+    "verification_tokens": {
+      "openai": "TODO"
+    }
+  },
+  "_comment": {
+    "auth": {
+      "type": "oauth",
+      "client_url": "https://www.linkedin.com/oauth",
+      "scope": "w_jobs",
+      "authorization_url": " https://www.linkedin.com/oauth/v2/authorization",
+      "authorization_content_type": "application/json",
+      "verification_tokens": {
+          "openai": "Replace_this_string_with_the_verification_token_generated_in_the_ChatGPT_UI"
+      }
+    } 
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:5003/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "http://localhost:5003/logo.png",
+  "contact_email": "kaykim@linkedin.com",
+  "legal_info_url": "http://www.example.com/legal"
+}
